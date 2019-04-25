@@ -19,7 +19,6 @@ class Ruletti extends React.Component {
     componentDidMount() {
         axios.get('http://194.76.224.25:3004/drinks')
             .then(res => {
-                console.log(res);
                 this.setState({ drinks: res.data });
             })
             .catch(error => {
@@ -35,7 +34,7 @@ class Ruletti extends React.Component {
         else {
             randomNro = Math.floor(Math.random() * this.state.drinks.length)
             var num = Math.random();
-            console.log(num)
+
             if (num < 0.7) {
                 randomLkm = "1x"
             }

@@ -11,7 +11,6 @@ class Juomat extends React.Component {
     componentDidMount() {
         axios.get('http://194.76.224.25:3004/drinks')
             .then(res => {
-                console.log(res);
                 this.setState({ drinks: res.data });
             })
             .catch(error => {
@@ -29,8 +28,9 @@ class Juomat extends React.Component {
 
     addDrink = (event) => {
         event.preventDefault()
+        console.log(this.state.newUrl)
 
-        const isHTTP = this.state.newTitle.includes("http")
+        const isHTTP = this.state.newUrl.includes("http")
 
         if (this.state.newTitle.length === 0) {
             return alert("Tietoa puuttuu!")
@@ -48,7 +48,6 @@ class Juomat extends React.Component {
 
         axios.post('http://194.76.224.25:3004/drinks', drink)
             .then(response => {
-                console.log(response)
                 this.setState({
                     drinks: this.state.drinks.concat(response.data),
                     newTitle: "",
