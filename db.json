@@ -1,0 +1,39 @@
+{
+  "drinks": [
+    {
+      "id": 1,
+      "title": "Jallushotti",
+      "url": "https://viinimaa.fi/sites/viinimaa/files/styles/facebook/public/product-images/jaloviina_kolme.png?itok=sCPONMHu"
+    },
+    {
+      "id": 2,
+      "title": "Suomiedi",
+      "url": "https://images.alko.fi/images/cs_srgb,f_auto,t_medium/cdn/103846/suomi-viina-muovipullo.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Mojito",
+      "url": "http://www.shotti.fi/wp-content/uploads/2015/02/Mojito-916x916.png"
+    },
+    {
+      "id": 4,
+      "title": "Valkovenäläinen",
+      "url": "http://www.shotti.fi/wp-content/uploads/2015/02/valkovenlainen-916x916.png"
+    },
+    {
+      "id": 5,
+      "title": "Tequila",
+      "url": "https://media.istockphoto.com/photos/shot-of-gold-tequila-with-lime-slice-picture-id158769352?k=6&m=158769352&s=612x612&w=0&h=yChQoc0wT1sGRHuXfR_BbSAifxE6V0D_ndE4CkmFsY8="
+    },
+    {
+      "id": 6,
+      "title": "Jägermeister",
+      "url": "https://www.weinquelle.com/fotos/s9302.png"
+    },
+    {
+      "id": 7,
+      "title": "Olut",
+      "url": "https://www.tampabay.com/storyimage/HI/20190227/ARTICLE/190229705/AR/0/AR-190229705.jpg&MaxW=1200&Q=66"
+    }
+  ]
+}

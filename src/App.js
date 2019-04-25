@@ -10,9 +10,9 @@ class App extends React.Component {
             <Layout>
                 <Drawer title="">
                     <Navigation>
-                        <Link to="/">Drinkkiruletti</Link>
-                        <Link to="/juomat">Juomat</Link>
-                        <Link to="/who">Ketä tän teki</Link>
+                        <Link to="/drinkkiruletti">Drinkkiruletti</Link>
+                        <Link to="/drinkkiruletti/juomat">Juomat</Link>
+                        <Link to="/drinkkiruletti/who">Ketä tän teki</Link>
                     </Navigation>
                 </Drawer>
                 <Content>
