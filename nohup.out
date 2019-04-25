@@ -1,0 +1,162 @@
+
+> drinkkiruletti@0.1.0 start /root/drinkkiruletti
+> PORT=80 react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view drinkkiruletti in the browser.
+
+  http://localhost:80/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://194.76.224.25:3004/drinks
+
+  Home
+  http://194.76.224.25:3004
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+  Error, can't read from stdin
+  Creating a snapshot from the CLI won't be possible
+[0mGET /drinks [32m200 [0m12.508 ms - -[0m
+[0mGET /drinks [36m304 [0m3.966 ms - -[0m
+[0mGET /drinks [36m304 [0m3.151 ms - -[0m
+[0mGET /drinks [36m304 [0m3.245 ms - -[0m
+[0mGET /drinks [36m304 [0m3.406 ms - -[0m
+[0mGET /drinks [36m304 [0m3.665 ms - -[0m
+[0mGET /drinks [36m304 [0m3.494 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.219 ms - -[0m
+[0mGET /drinks [36m304 [0m2.155 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.488 ms - -[0m
+[0mGET /drinks [36m304 [0m3.230 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.377 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.170 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.204 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.273 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m4.790 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.269 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.572 ms - -[0m
+[0mGET /drinks [36m304 [0m3.372 ms - -[0m
+[0mGET /drinks [36m304 [0m1.891 ms - -[0m
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.245 ms - -[0m
+[0mGET /drinks [36m304 [0m3.106 ms - -[0m
+[0mGET /drinks [36m304 [0m3.843 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.350 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.223 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.334 ms - -[0m
+[0mGET /drinks [36m304 [0m3.703 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.095 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m4.705 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.050 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.071 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.163 ms - -[0m
+[0mGET /drinks [36m304 [0m3.110 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.275 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.213 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.050 ms - -[0m
+[0mGET /drinks [36m304 [0m3.059 ms - -[0m
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.168 ms - -[0m
+[0mGET /drinks [36m304 [0m3.108 ms - -[0m
+[0mGET /drinks [36m304 [0m3.632 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.700 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m4.353 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m2.971 ms - -[0m
+[0mGET /drinks [36m304 [0m3.322 ms - -[0m
+[0mGET /drinks [36m304 [0m3.184 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.350 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.066 ms - -[0m
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m4.532 ms - -[0m
+[0mGET /drinks [36m304 [0m3.341 ms - -[0m
+[0mGET /drinks [36m304 [0m3.932 ms - -[0m
+[0mGET /drinks [36m304 [0m3.295 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.012 ms - -[0m
+[0mGET /drinks [36m304 [0m3.102 ms - -[0m
+[0mGET /drinks [36m304 [0m3.084 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.005 ms - -[0m
+[0mGET /drinks [36m304 [0m3.415 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.080 ms - -[0m
+[0mGET /drinks [36m304 [0m3.223 ms - -[0m
+[0mGET /drinks [36m304 [0m3.053 ms - -[0m
+[0mGET /drinks [36m304 [0m3.186 ms - -[0m

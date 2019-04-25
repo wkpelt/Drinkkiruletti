@@ -36,10 +36,10 @@ class Ruletti extends React.Component {
             randomNro = Math.floor(Math.random() * this.state.drinks.length)
             var num = Math.random();
             console.log(num)
-            if (num < 0.6) {
+            if (num < 0.7) {
                 randomLkm = "1x"
             }
-            else if (num > 0.6 && num < 0.9) {
+            else if (num > 0.7 && num < 0.9) {
                 randomLkm = "2x"
             }
             else if (num > 0.9) {
@@ -76,11 +76,11 @@ class Ruletti extends React.Component {
         }
         else {
             return (
-                <div className="perus">
+                <div>
                     <h1 className="title">Drinkkiruletti</h1>
+                    <h4 className="smaller_title">Paina ruutua aloittaaksesi!</h4>
                     <div style={{ width: "100%", height: "100%", position: "absolute", top: "0", left: "0" }} onClick={this.handleClick}>
                     </div>
-                    <h4>Aloita painamalla ruutua!</h4>
                 </div>
             )
         }

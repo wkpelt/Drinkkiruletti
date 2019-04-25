@@ -77,6 +77,9 @@ class Juomat extends React.Component {
                         <button type="submit">Lisää</button>
                     </div>
                 </form>
+                <div>
+                    <h4>Tällä hetkellä {this.state.drinks.length} juomaa tietokannassamme!</h4>
+                </div>
             </div>
         )
     }
