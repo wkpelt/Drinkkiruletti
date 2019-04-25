@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Drinkkiruletti/precache-manifest.5b24d012865c984015b5ae8595ba2ee9.js"
+  "/drinkkiruletti/precache-manifest.630dba698e04c627b017bb615616ae55.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Drinkkiruletti/index.html", {
+workbox.routing.registerNavigationRoute("/drinkkiruletti/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
