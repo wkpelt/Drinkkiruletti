@@ -1,12 +1,9 @@
-import React from 'react'
+import React from "react";
 
 class Etusivu extends React.Component {
-    render() {
-        return (
-            <div className="etusivu">
-            </div>
-        )
-    }
+  render() {
+    return <div />;
+  }
 }
 
-export default Etusivu
+export default Etusivu;

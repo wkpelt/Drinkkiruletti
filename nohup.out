@@ -1365,3 +1365,90 @@ Compiling...
 Compiled successfully!
 Compiling...
 Compiled successfully!
+[0mGET /drinks [36m304 [0m4.460 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.041 ms - -[0m
+[0mGET /drinks [36m304 [0m3.355 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m2.881 ms - -[0m
+[0mGET /drinks [36m304 [0m3.083 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.699 ms - -[0m
+[0mGET /drinks [36m304 [0m3.021 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.046 ms - -[0m
+[0mGET /drinks [36m304 [0m3.057 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.436 ms - -[0m
+Compiling...
+Failed to compile.
+
+./src/components/Ruletti.js
+Syntax error: Unexpected token, expected "}" (65:62)
+
+  63 |                                         <div>Loading...</div>
+  64 |                                     ) : (
+> 65 |                                             <div style={color: 'black'}>
+     |                                                              ^
+  66 |                                                 <h3 style={{ fontSize: '40px' }}>{randomLkm}</h3>
+  67 |                                     <img src={this.state.drinks[randomNro].url}
+  68 |                                         alt={this.state.drinks[randomNro].title} className="juoma-img"></img>
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.200 ms - -[0m
+[0mGET /drinks [36m304 [0m4.962 ms - -[0m
+[0mGET /drinks [36m304 [0m1.824 ms - -[0m
+[0mGET /drinks [36m304 [0m3.210 ms - -[0m
+[0mGET /drinks [36m304 [0m3.263 ms - -[0m
+[0mGET /drinks [36m304 [0m1.861 ms - -[0m
+[0mGET /drinks [36m304 [0m4.201 ms - -[0m
+[0mGET /drinks [36m304 [0m2.844 ms - -[0m
+[0mGET /drinks [36m304 [0m3.224 ms - -[0m
+[0mGET /drinks [36m304 [0m2.994 ms - -[0m
+[0mGET /drinks [36m304 [0m2.983 ms - -[0m
+[0mGET /drinks [36m304 [0m3.225 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.080 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m4.958 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [36m304 [0m3.084 ms - -[0m
+[0mGET /drinks [36m304 [0m3.240 ms - -[0m
+[0mGET /drinks [36m304 [0m3.146 ms - -[0m
+[0mGET /drinks [32m200 [0m7.919 ms - -[0m
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m16.540 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m6.531 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m7.461 ms - -[0m
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m7.929 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m4.815 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m10.570 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m19.860 ms - -[0m
+Compiling...
+Compiled successfully!
+[0mGET /drinks [32m200 [0m7.696 ms - -[0m
