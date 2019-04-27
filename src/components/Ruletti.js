@@ -1,5 +1,7 @@
 import React from 'react'
 import { Card, CardText } from "react-mdl"
+import Zoom from '@material-ui/core/Zoom';
+import Fade from '@material-ui/core/Fade';
 import axios from 'axios';
 
 var randomNro = 0
@@ -12,6 +14,7 @@ class Ruletti extends React.Component {
     state = {
         drinks: [],
         clicked: false,
+        transition: false,
         newTitle: "",
         newUrl: ""
     };
@@ -26,9 +29,9 @@ class Ruletti extends React.Component {
             });
     }
 
-
     handleClick() {
         this.setState({ clicked: true });
+        //this.setState({ transition: !this.state.transition })
         if (this.state.drinks === undefined || this.state.drinks.length === 0) {
         }
         else {
@@ -52,32 +55,41 @@ class Ruletti extends React.Component {
             return (
                 <div>
                     <h1 className="title">Drinkkiruletti</h1>
-                    <Card shadow={6} className="perus" style={{ minWidth: '300px', margin: 'auto', opacity: 0.92 }} onClick={this.handleClick}>
-                        <CardText>
-                            <div>
-                                {this.state.drinks === undefined || this.state.drinks.length === 0 ? (
-                                    <div>Loading...</div>
-                                ) : (
-                                        <div>
-                                            <h3>{randomLkm}</h3>
-                                            <img src={this.state.drinks[randomNro].url}
-                                                alt={this.state.drinks[randomNro].title} className="juoma-img"></img>
-                                            <h3 style={{ color: "black" }}>
-                                                {this.state.drinks[randomNro].title}
-                                            </h3>
-                                        </div>
-                                    )}
-                            </div>
-                        </CardText>
-                    </Card>
+                    <Zoom in={true} timeout={250}>
+                        <Card shadow={6} className="perus" style={{ minWidth: '300px', margin: 'auto', opacity: 0.92, borderRadius: '20px' }} onClick={this.handleClick}>
+                            <CardText>
+                                <div>
+                                    {this.state.drinks === undefined || this.state.drinks.length === 0 ? (
+                                        <div>Loading...</div>
+                                    ) : (
+                                            <div>
+                                                <h3 style={{ color: 'black', fontSize: '40px' }}>{randomLkm}</h3>
+                                                <img src={this.state.drinks[randomNro].url}
+                                                    alt={this.state.drinks[randomNro].title} className="juoma-img"></img>
+                                                <h3 style={{ color: 'black' }}>
+                                                    {this.state.drinks[randomNro].title}
+                                                </h3>
+                                            </div>
+                                        )}
+                                </div>
+                            </CardText>
+                        </Card>
+                    </Zoom>
                 </div >
             )
         }
         else {
             return (
                 <div>
-                    <h1 className="title">Drinkkiruletti</h1>
-                    <h4 className="smaller_title">Paina ruutua aloittaaksesi!</h4>
+                    <Zoom in={true} timeout={800}>
+                        <h1 className="title">Drinkkiruletti</h1>
+                    </Zoom>
+                    {setTimeout(function () {
+                        this.setState({ transition: true });
+                    }.bind(this), 700)}
+                    <Fade in={this.state.transition} timeout={500}>
+                        <h4 className="smaller_title">Paina ruutua aloittaaksesi!</h4>
+                    </Fade>
                     <div style={{ width: "100%", height: "100%", position: "absolute", top: "0", left: "0" }} onClick={this.handleClick}>
                     </div>
                 </div>
