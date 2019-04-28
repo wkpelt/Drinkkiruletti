@@ -1,58 +1,48 @@
-body{
-    background: url(https://i.imgur.com/BIDhiYe.gif) no-repeat center top fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover
+body {
+  background: url(https://i.imgur.com/BIDhiYe.gif) no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-div{
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    user-select:none;
+div {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
-
 
 .juoma-img {
-    height: 200px;
-    padding-top: 2em;
+  height: 200px;
+  padding-top: 2em;
 }
 
 .perus {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    color: white;
-    text-shadow: 1px 1px 2px #000000;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .who {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
 }
 .smaller_title {
-    text-align: center;
-    -webkit-text-stroke: 0px black;
-    color: white;
-    text-shadow:
-        3px 3px 0 #000,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-        1px 1px 0 #000;
+  text-align: center;
+  -webkit-text-stroke: 0px black;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-
 .title {
-    text-align: center;
-    -webkit-text-stroke: 1px black;
-    color: white;
-    text-shadow:
-        3px 3px 0 #000,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-        1px 1px 0 #000;
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
