@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
+import SendIcon from "./media/send.png";
+import DrawerBox from "./DrawerBox";
 
 class Juomat extends React.Component {
   state = {
@@ -58,34 +60,38 @@ class Juomat extends React.Component {
 
   render() {
     return (
-      <div className="perus">
-        <h3 className="smaller_title">Lisää juomia tästä</h3>
-        <form onSubmit={this.addDrink}>
+      <div className="layout">
+        <DrawerBox />
+        <div className="perus">
+          <h3 className="smaller_title">Lisää juomia tästä</h3>
+          <form onSubmit={this.addDrink}>
+            <div>
+              <input
+                value={this.state.newTitle}
+                onChange={this.handleTitleChange}
+                placeholder="Juoman nimi"
+              />
+            </div>
+            <div>
+              <input
+                value={this.state.newUrl}
+                onChange={this.handleURLChange}
+                placeholder="Kuva juomasta (URL)"
+              />
+            </div>
+            <br />
+            <div>
+              <Button type="submit" variant="contained" color="secondary">
+                <img src={SendIcon} alt="" />
+                Lisää
+              </Button>
+            </div>
+          </form>
           <div>
-            <input
-              value={this.state.newTitle}
-              onChange={this.handleTitleChange}
-              placeholder="Juoman nimi"
-            />
+            <h4>
+              Tällä hetkellä {this.state.drinks.length} juomaa tietokannassamme!
+            </h4>
           </div>
-          <div>
-            <input
-              value={this.state.newUrl}
-              onChange={this.handleURLChange}
-              placeholder="Kuva juomasta (URL)"
-            />
-          </div>
-          <br />
-          <div>
-            <Button type="submit" variant="contained">
-              Lisää
-            </Button>
-          </div>
-        </form>
-        <div>
-          <h4>
-            Tällä hetkellä {this.state.drinks.length} juomaa tietokannassamme!
-          </h4>
         </div>
       </div>
     );

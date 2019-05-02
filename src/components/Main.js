@@ -12,6 +12,7 @@ const Main = () => {
       <Route exact path={"/drinkkiruletti"} component={Ruletti} />
       <Route exact path={"/drinkkiruletti/juomat"} component={Juomat} />
       <Route exact path={"/drinkkiruletti/who"} component={Who} />
+      <Route component={Ruletti} />
     </Switch>
   );
 };
