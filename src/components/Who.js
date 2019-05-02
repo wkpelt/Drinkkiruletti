@@ -1,13 +1,18 @@
 import React from "react";
 import { Card, CardText } from "react-mdl";
 import Grow from "@material-ui/core/Grow";
-import DrawerBox from "./DrawerBox";
+import LeftBox from "./LeftBox";
+import MetaTags from "react-meta-tags";
 
 class Juomat extends React.Component {
   render() {
     return (
       <div className="layout">
-        <DrawerBox />
+        <MetaTags>
+          <title>Who</title>
+          <meta name="description" content="Who made the app" />
+        </MetaTags>
+        <LeftBox />
         <div className="who">
           <h2 className="smaller_title">Ketä tän teki?</h2>
           <Grow in={true}>

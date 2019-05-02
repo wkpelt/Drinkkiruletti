@@ -5,16 +5,16 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "./media/menu.svg";
-import RulettiIcon from "./media/0.png";
-import JuomatIcon from "./media/1.png";
-import KukaIcon from "./media/2.png";
+import AboutMe from "./media/aboutme.png";
+import Projects from "./media/projects.png";
+import Resume from "./media/cv.png";
 import { Link } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 
-class DrawerBox extends React.Component {
+class RightDrawer extends React.Component {
   state = {
-    left: false
+    right: false
   };
 
   toggleDrawer = (side, open) => () => {
@@ -24,13 +24,9 @@ class DrawerBox extends React.Component {
   };
 
   render() {
-    const pages = [
-      "/drinkkiruletti",
-      "/drinkkiruletti/juomat",
-      "/drinkkiruletti/who"
-    ];
+    const pages = ["/aboutme", "/projects", "/resume"];
 
-    const icons = [RulettiIcon, JuomatIcon, KukaIcon];
+    const icons = [AboutMe, Projects, Resume];
 
     const sideList = (
       <div>
@@ -53,7 +49,7 @@ class DrawerBox extends React.Component {
         </List>
         <Divider />
         <List>
-          {["Drinkkiruletti", "Juomat", "Ketä tän teki?"].map((text, index) => (
+          {["About me", "Projects", "Resume"].map((text, index) => (
             <Link to={pages[index]} key={text}>
               <ListItem button>
                 <ListItemText
@@ -80,22 +76,24 @@ class DrawerBox extends React.Component {
     return (
       <div>
         <IconButton
-          onClick={this.toggleDrawer("left", true)}
+          onClick={this.toggleDrawer("right", true)}
           style={{ marginTop: "10px", marginLeft: "10px", marginRight: "10px" }}
         >
+          About
           <img src={MenuIcon} alt="" />
         </IconButton>
 
         <Drawer
-          open={this.state.left}
-          onClose={this.toggleDrawer("left", false)}
+          anchor="right"
+          open={this.state.right}
+          onClose={this.toggleDrawer("right", false)}
           style={{ opacity: 0.98 }}
         >
           <div
             tabIndex={0}
             role="button"
-            onClick={this.toggleDrawer("left", false)}
-            onKeyDown={this.toggleDrawer("left", false)}
+            onClick={this.toggleDrawer("right", false)}
+            onKeyDown={this.toggleDrawer("right", false)}
           >
             {sideList}
           </div>
@@ -105,4 +103,4 @@ class DrawerBox extends React.Component {
   }
 }
 
-export default DrawerBox;
+export default RightDrawer;

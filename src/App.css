@@ -18,6 +18,29 @@ div {
   user-select: none;
 }
 
+.social {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin: auto;
+}
+
+.social i {
+  color: black;
+  font-size: 2em;
+  padding: 4px;
+}
+.banner h1 {
+  margin-bottom: 0px;
+  letter-spacing: -5px;
+}
+
+.banner h4 {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  letter-spacing: 5px;
+}
+
 .juoma-img {
   height: 200px;
   padding-top: 2em;
@@ -49,4 +72,35 @@ div {
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.etusivu {
+  background: linear-gradient(125deg, #cb21ff, #42aaff, #ffd00f);
+  background-size: 300% 300%;
+
+  -webkit-animation: GradientAnimation 40s ease infinite;
+  animation: GradientAnimation 40s ease infinite;
+}
+
+@-webkit-keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

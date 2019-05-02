@@ -3,8 +3,9 @@ import { Card, CardText, ProgressBar } from "react-mdl";
 import Zoom from "@material-ui/core/Zoom";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
-import DrawerBox from "./DrawerBox";
+import LeftBox from "./LeftBox";
 import Popup from "./Popup";
+import MetaTags from "react-meta-tags";
 
 var randomNro = 0;
 var randomLkm = 1;
@@ -53,13 +54,17 @@ class Ruletti extends React.Component {
     if (this.state.clicked) {
       return (
         <div className="layout">
+          <MetaTags>
+            <title>Drinkkiruletti</title>
+            <meta name="description" content="Rollaa itsellesi juoma!" />
+          </MetaTags>
           <div
             style={{
               display: "flex",
               justifyContent: "space-between"
             }}
           >
-            <DrawerBox />
+            <LeftBox />
             <Popup />
           </div>
           <h1 className="title" style={{ margin: "0px" }}>
@@ -109,13 +114,17 @@ class Ruletti extends React.Component {
       );
       return (
         <div className="layout">
+          <MetaTags>
+            <title>Drinkkiruletti</title>
+            <meta name="description" content="Rollaa itsellesi juoma!" />
+          </MetaTags>
           <div
             style={{
               display: "flex",
               justifyContent: "space-between"
             }}
           >
-            <DrawerBox />
+            <LeftBox />
             <Popup />
           </div>
           <Zoom in={true} timeout={800}>
