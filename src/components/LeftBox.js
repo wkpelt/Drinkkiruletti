@@ -7,10 +7,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "./media/menu.svg";
 import RulettiIcon from "./media/0.png";
 import JuomatIcon from "./media/1.png";
-import KukaIcon from "./media/2.png";
 import { Link } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
+import ViLLEBot from "./media/villebot.png";
 
 class LeftBox extends React.Component {
   state = {
@@ -27,10 +27,11 @@ class LeftBox extends React.Component {
     const pages = [
       "/drinkkiruletti",
       "/drinkkiruletti/juomat",
-      "/drinkkiruletti/who"
+      "null",
+      "/villebot"
     ];
 
-    const icons = [RulettiIcon, JuomatIcon, KukaIcon];
+    const icons = [RulettiIcon, JuomatIcon, null, ViLLEBot, null];
 
     const sideList = (
       <div>
@@ -53,27 +54,35 @@ class LeftBox extends React.Component {
         </List>
         <Divider />
         <List>
-          {["Drinkkiruletti", "Juomat", "Ketä tän teki?"].map((text, index) => (
-            <Link to={pages[index]} key={text}>
-              <ListItem button>
-                <ListItemText
-                  disableTypography
-                  primary={
-                    <Typography type="body2" style={{ fontSize: "20px" }}>
-                      <img
-                        src={icons[index]}
-                        alt={text}
-                        style={{ maxWidth: "32px", marginRight: "6px" }}
-                      />
-                      {text}
-                    </Typography>
-                  }
-                />
-              </ListItem>
-            </Link>
-          ))}
+          {["Drinkkiruletti", "Juomat", "divider", "ViLLEBot", "divider"].map(
+            (text, index) =>
+              text === "divider" ? (
+                <Divider key={text + index} />
+              ) : (
+                <Link
+                  to={pages[index]}
+                  key={text + index}
+                  target={text === "ViLLEBot" ? "_blank" : ""}
+                >
+                  <ListItem button>
+                    <ListItemText
+                      disableTypography
+                      primary={
+                        <Typography type="body2" style={{ fontSize: "20px" }}>
+                          <img
+                            src={icons[index]}
+                            alt={text}
+                            style={{ width: "32px", margin: "6px" }}
+                          />
+                          {text}
+                        </Typography>
+                      }
+                    />
+                  </ListItem>
+                </Link>
+              )
+          )}
         </List>
-        <Divider />
       </div>
     );
 

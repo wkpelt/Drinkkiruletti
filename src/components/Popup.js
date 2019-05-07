@@ -48,6 +48,10 @@ class SimpleModal extends React.Component {
               <li>1x – 60% todennäköisyys</li>
               <li>2x – 30% todennäköisyys</li>
               <li>3x – 10% todennäköisyys</li>
+              <br />
+            </Typography>
+            <Typography variant="h6">
+              Tällä hetkellä {this.props.sum} juomaa tietokannassamme!
             </Typography>
           </div>
         </Modal>

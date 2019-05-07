@@ -4,6 +4,8 @@ import Ruletti from "./Ruletti";
 import Juomat from "./Juomat";
 import Who from "./Who";
 import Etusivu from "./Etusivu";
+import Villebot from "./Villebot";
+import Market from "./Market";
 
 const Main = () => {
   return (
@@ -15,6 +17,8 @@ const Main = () => {
       <Route exact path={"/aboutme"} component={Etusivu} />
       <Route exact path={"/projects"} component={Etusivu} />
       <Route exact path={"/resume"} component={Etusivu} />
+      <Route exact path={"/villebot"} component={Villebot} />
+      <Route exact path={"/mordormarket"} component={Market} />
       <Route component={Ruletti} />
     </Switch>
   );

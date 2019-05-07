@@ -4,8 +4,13 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+@media (min-width: 600px) {
+  html {
+    min-height: 100%;
+  }
 }
 
 a {
@@ -30,6 +35,12 @@ div {
   font-size: 2em;
   padding: 4px;
 }
+
+.social i:hover {
+  color: white;
+  transition: all 0.4s ease 0s;
+}
+
 .banner h1 {
   margin-bottom: 0px;
   letter-spacing: -5px;
@@ -38,19 +49,97 @@ div {
 .banner h4 {
   margin-top: 0px;
   margin-bottom: 8px;
-  letter-spacing: 5px;
+  animation: movetext 15s infinite alternate;
+  -webkit-animation: movetext 15s infinite alternate;
 }
 
-.juoma-img {
-  height: 200px;
-  padding-top: 2em;
+@keyframes movetext {
+  0% {
+    letter-spacing: 5px;
+  }
+  100% {
+    letter-spacing: 10px;
+  }
+}
+
+@-webkit-keyframes GradientAnimation {
+  0% {
+    letter-spacing: 5px;
+  }
+  100% {
+    letter-spacing: 10px;
+  }
+}
+
+.all_drinks {
+  justify-content: space-around;
+}
+
+#shadow {
+  -webkit-box-shadow: 0px 0px 20px 3px #000000 !important;
+  box-shadow: 0px 0px 20px 3px #000000 !important;
+}
+
+.kortti {
+  position: relative;
+  text-align: center;
+  color: black;
+  width: 330px;
+  height: 440px;
+  margin: auto;
+  border-radius: 20px !important;
+  -webkit-box-shadow: 0px 0px 11px 0px #000000 !important;
+  box-shadow: 0px 0px 11px 0px #000000 !important;
+}
+.kortti h3 {
+  color: "black";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: block;
+  font-size: 28px;
+}
+.kortti h4 {
+  color: "black";
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin: 24px;
+  display: block;
+  font-size: 28px;
+}
+
+.kortti-img {
+  height: 270px;
+  max-width: 280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
 .perus {
   text-align: center;
   width: 100%;
   color: white;
-  text-shadow: 1px 1px 2px #000000;
+}
+
+#totalDrinks {
+  text-shadow: 0px 2px 4px #000000;
+  color: white !important;
+  margin: 10px 0px 0px 0px;
+}
+#alert-dialog-title {
+  text-align: center;
+  position: relative;
+}
+
+#samplekortti {
+  margin-top: 30px;
 }
 
 .who {
@@ -64,6 +153,7 @@ div {
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 0px;
 }
 
 .title {
@@ -72,6 +162,7 @@ div {
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
+  margin-bottom: 20px !important;
 }
 
 .etusivu {
@@ -103,4 +194,24 @@ div {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.villebot {
+  color: white;
+  background-color: #212121;
+}
+
+.presentation {
+  text-align: "justify";
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.presentationL {
+  text-align: "justify";
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }

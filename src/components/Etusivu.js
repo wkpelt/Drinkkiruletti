@@ -1,6 +1,6 @@
 import React from "react";
 import LeftBox from "./LeftBox";
-import RightDrawer from "./RightDrawer";
+import RightBox from "./RightBox";
 import Fade from "@material-ui/core/Fade";
 import MetaTags from "react-meta-tags";
 
@@ -28,7 +28,7 @@ class Etusivu extends React.Component {
             >
               <LeftBox />
 
-              <RightDrawer />
+              <RightBox />
             </div>
             <div
               className="banner"

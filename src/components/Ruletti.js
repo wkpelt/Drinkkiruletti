@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardText, ProgressBar } from "react-mdl";
+import { Card, ProgressBar } from "react-mdl";
 import Zoom from "@material-ui/core/Zoom";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
@@ -65,42 +65,27 @@ class Ruletti extends React.Component {
             }}
           >
             <LeftBox />
-            <Popup />
+            <Popup sum={this.state.drinks.length} />
           </div>
           <h1 className="title" style={{ margin: "0px" }}>
             Drinkkiruletti
           </h1>
           <Zoom in={true} timeout={250}>
-            <Card
-              shadow={6}
-              className="perus"
-              style={{
-                minWidth: "300px",
-                margin: "auto",
-                opacity: 0.92,
-                borderRadius: "20px",
-                marginTop: "10px"
-              }}
-              onClick={this.handleClick}
-            >
-              <CardText>
+            <Card shadow={6} className="kortti" onClick={this.handleClick}>
+              {this.state.drinks === undefined ||
+              this.state.drinks.length === 0 ? (
+                <ProgressBar indeterminate />
+              ) : (
                 <div>
-                  {this.state.drinks === undefined ||
-                  this.state.drinks.length === 0 ? (
-                    <ProgressBar indeterminate />
-                  ) : (
-                    <div style={{ color: "black" }}>
-                      <h3 style={{ fontSize: "40px" }}>{randomLkm}</h3>
-                      <img
-                        src={this.state.drinks[randomNro].url}
-                        alt={this.state.drinks[randomNro].title}
-                        className="juoma-img"
-                      />
-                      <h3>{this.state.drinks[randomNro].title}</h3>
-                    </div>
-                  )}
+                  <h4>{randomLkm}</h4>
+                  <img
+                    src={this.state.drinks[randomNro].url}
+                    alt={this.state.drinks[randomNro].title}
+                    className="kortti-img"
+                  />
+                  <h3>{this.state.drinks[randomNro].title}</h3>
                 </div>
-              </CardText>
+              )}
             </Card>
           </Zoom>
         </div>
@@ -125,7 +110,7 @@ class Ruletti extends React.Component {
             }}
           >
             <LeftBox />
-            <Popup />
+            <Popup sum={this.state.drinks.length} />
           </div>
           <Zoom in={true} timeout={800}>
             <h1 className="title" style={{ margin: "0px" }}>
