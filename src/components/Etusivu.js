@@ -21,13 +21,13 @@ class Etusivu extends React.Component {
         <Fade in={true} timeout={3000}>
           <div>
             <div
+              className="header"
               style={{
                 display: "flex",
                 justifyContent: "space-between"
               }}
             >
               <LeftBox />
-
               <RightBox />
             </div>
             <div

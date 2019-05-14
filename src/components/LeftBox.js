@@ -17,21 +17,16 @@ class LeftBox extends React.Component {
     left: false
   };
 
-  toggleDrawer = (side, open) => () => {
+  toggleDrawer = open => () => {
     this.setState({
-      [side]: open
+      left: open
     });
   };
 
   render() {
-    const pages = [
-      "/drinkkiruletti",
-      "/drinkkiruletti/juomat",
-      "null",
-      "/villebot"
-    ];
+    const pages = ["/drinkkiruletti", "/drinkkiruletti/juomat", "/villebot"];
 
-    const icons = [RulettiIcon, JuomatIcon, null, ViLLEBot, null];
+    const icons = [RulettiIcon, JuomatIcon, ViLLEBot];
 
     const sideList = (
       <div>
@@ -43,7 +38,7 @@ class LeftBox extends React.Component {
                 primary={
                   <Typography
                     type="body2"
-                    style={{ textAlign: "center", fontSize: "20px" }}
+                    style={{ textAlign: "center", fontSize: "24px" }}
                   >
                     Epi.fi
                   </Typography>
@@ -54,34 +49,30 @@ class LeftBox extends React.Component {
         </List>
         <Divider />
         <List>
-          {["Drinkkiruletti", "Juomat", "divider", "ViLLEBot", "divider"].map(
-            (text, index) =>
-              text === "divider" ? (
-                <Divider key={text + index} />
-              ) : (
-                <Link
-                  to={pages[index]}
-                  key={text + index}
-                  target={text === "ViLLEBot" ? "_blank" : ""}
-                >
-                  <ListItem button>
-                    <ListItemText
-                      disableTypography
-                      primary={
-                        <Typography type="body2" style={{ fontSize: "20px" }}>
-                          <img
-                            src={icons[index]}
-                            alt={text}
-                            style={{ width: "32px", margin: "6px" }}
-                          />
-                          {text}
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-              )
-          )}
+          {["Drinkkiruletti", "Juomat", "ViLLEBot"].map((text, index) => (
+            <Link
+              to={pages[index]}
+              key={text + index}
+              target={text === "ViLLEBot" ? "_blank" : ""}
+            >
+              <ListItem button>
+                <ListItemText
+                  disableTypography
+                  primary={
+                    <Typography type="body2" style={{ fontSize: "20px" }}>
+                      <img
+                        src={icons[index]}
+                        alt={text}
+                        style={{ width: "32px", margin: "6px" }}
+                      />
+                      {text}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+              <Divider />
+            </Link>
+          ))}
         </List>
       </div>
     );
@@ -89,7 +80,7 @@ class LeftBox extends React.Component {
     return (
       <div>
         <IconButton
-          onClick={this.toggleDrawer("left", true)}
+          onClick={this.toggleDrawer(true)}
           style={{ marginTop: "10px", marginLeft: "10px", marginRight: "10px" }}
         >
           <img src={MenuIcon} alt="" />
@@ -98,14 +89,14 @@ class LeftBox extends React.Component {
 
         <Drawer
           open={this.state.left}
-          onClose={this.toggleDrawer("left", false)}
+          onClose={this.toggleDrawer(false)}
           style={{ opacity: 0.98 }}
         >
           <div
             tabIndex={0}
             role="button"
-            onClick={this.toggleDrawer("left", false)}
-            onKeyDown={this.toggleDrawer("left", false)}
+            onClick={this.toggleDrawer(false)}
+            onKeyDown={this.toggleDrawer(false)}
           >
             {sideList}
           </div>

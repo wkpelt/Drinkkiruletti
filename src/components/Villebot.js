@@ -105,6 +105,9 @@ class Villebot extends React.Component {
             overflow: "auto"
           }}
         >
+          <div className="onMobile">
+            Sorry, page not supported for mobile devices!
+          </div>
           <div style={{ float: "right" }} className="presentation">
             {slides[this.state.num]}
           </div>

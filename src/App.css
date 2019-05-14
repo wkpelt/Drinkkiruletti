@@ -32,7 +32,7 @@ div {
 .input-image{
   background-color: #f50057;
   margin: 20px;
-  width: 220px;
+  width: 250px;
 }
 
 .upload{
@@ -168,7 +168,7 @@ div {
   -webkit-text-stroke: 0px black;
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-    -1px 1px 0 #000, 1px 1px 0 #000;
+  -1px 1px 0 #000, 1px 1px 0 #000;
   margin: 0px;
 }
 
@@ -177,14 +177,14 @@ div {
   -webkit-text-stroke: 1px black;
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-    -1px 1px 0 #000, 1px 1px 0 #000;
+  -1px 1px 0 #000, 1px 1px 0 #000;
   margin-bottom: 20px !important;
 }
 
 .etusivu {
   background: linear-gradient(125deg, #cb21ff, #42aaff, #ffd00f);
   background-size: 300% 300%;
-
+  
   -webkit-animation: GradientAnimation 40s ease infinite;
   animation: GradientAnimation 40s ease infinite;
 }
@@ -230,4 +230,20 @@ div {
   position: absolute;
   top: 10%;
   left: 10%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .presentation {
+    display: none;
+
+  }
+  .presentationL {
+    display: none;
+  }
+  .onMobile{
+    display: block !important;
+  }
+}
+.onMobile{
+  display: none;
 }

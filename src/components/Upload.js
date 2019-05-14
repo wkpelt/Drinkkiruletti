@@ -24,11 +24,11 @@ class Upload extends React.Component {
   render() {
     return (
       <div className="upload">
-          <input
-            type="file"
-            className="input-image"
-            onChange={this.uploadImage.bind(this)}
-          />
+        <input
+          type="file"
+          className="input-image"
+          onChange={this.uploadImage.bind(this)}
+        />
       </div>
     );
   }

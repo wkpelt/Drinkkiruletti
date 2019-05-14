@@ -48,7 +48,7 @@ class drinkki extends React.Component {
               direction={this.state.slideIn ? "left" : "right"}
               timeout={500}
             >
-              <div>
+              <div style={{ width: "330px", height: "270px" }}>
                 <Img
                   src={this.state.props.drink.url}
                   alt={this.state.props.drink.title}
