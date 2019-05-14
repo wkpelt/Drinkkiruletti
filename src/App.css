@@ -5,6 +5,7 @@
   -o-background-size: cover;
   background-size: cover;
   min-height: 100vh;
+  position: relative;
 }
 
 @media (min-width: 600px) {
@@ -23,6 +24,20 @@ div {
   user-select: none;
 }
 
+.header {
+  display: flex!important;
+  justify-content: space-between!important;
+}
+
+.input-image{
+  background-color: #f50057;
+  margin: 20px;
+  width: 220px;
+}
+
+.upload{
+  margin: 0
+}
 .social {
   display: flex;
   justify-content: center;
@@ -62,7 +77,7 @@ div {
   }
 }
 
-@-webkit-keyframes GradientAnimation {
+@-webkit-keyframes movetext {
   0% {
     letter-spacing: 5px;
   }
@@ -71,13 +86,14 @@ div {
   }
 }
 
-.all_drinks {
-  justify-content: space-around;
-}
-
 #shadow {
   -webkit-box-shadow: 0px 0px 20px 3px #000000 !important;
   box-shadow: 0px 0px 20px 3px #000000 !important;
+}
+
+.allDrinks{
+  display: flex!important;
+  justify-content: space-between!important;
 }
 
 .kortti {
@@ -93,7 +109,7 @@ div {
 }
 .kortti h3 {
   color: "black";
-  position: absolute;
+  position: relative;
   bottom: 0;
   right: 0;
   left: 0;
@@ -115,7 +131,7 @@ div {
 
 .kortti-img {
   height: 270px;
-  max-width: 280px;
+  max-width: 330px;
   display: block;
   margin-left: auto;
   margin-right: auto;

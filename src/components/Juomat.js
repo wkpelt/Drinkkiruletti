@@ -1,13 +1,13 @@
 import React from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
-
 import LeftBox from "./LeftBox";
 import MetaTags from "react-meta-tags";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import Card from "@material-ui/core/Card";
 import Slide from "@material-ui/core/Slide";
+import Upload from "./Upload";
 
 import Input from "@material-ui/core/Input";
 import InputBase from "@material-ui/core/InputBase";
@@ -83,9 +83,14 @@ class Juomat extends React.Component {
     this.setState({ drinkQualified: false });
   };
 
+  handler = val => {
+    this.setState({
+      newUrl: val
+    });
+  };
+
   checkDrink = event => {
     event.preventDefault();
-    console.log(this.state.newUrl);
 
     const isHTTP = this.state.newUrl.includes("http");
 
@@ -134,6 +139,7 @@ class Juomat extends React.Component {
               <div>
                 <h4>
                   <Input
+                    className="urli"
                     value={this.state.newUrl}
                     onChange={this.handleURLChange}
                     placeholder="Kuva juomasta (URL)"
@@ -162,15 +168,24 @@ class Juomat extends React.Component {
               </div>
             </Card>
             <div>
-              <Button
-                type="submit"
-                variant="contained"
-                color="secondary"
-                size="large"
-                style={{ margin: "10px" }}
+              <div
+                style={{
+                  justifyContent: "center",
+                  display: "flex"
+                }}
               >
-                Lisää
-              </Button>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="secondary"
+                  size="large"
+                  display="inline"
+                  style={{ margin: "10px" }}
+                >
+                  Lisää
+                </Button>
+                <Upload handler={this.handler} />
+              </div>
               <Dialog
                 BackdropProps={{
                   classes: {
