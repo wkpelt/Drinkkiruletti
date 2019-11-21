@@ -16,6 +16,10 @@ class RightBox extends React.Component {
   state = {
     right: false
   };
+  scrollToAboutme = () =>
+    window.scrollTo(0, this.props.refprop.current.offsetTop);
+  scrollToProjects = () =>
+    window.scrollTo(0, this.ProjectsRef.current.offsetTop);
 
   toggleDrawer = (side, open) => () => {
     this.setState({
@@ -24,7 +28,9 @@ class RightBox extends React.Component {
   };
 
   render() {
-    const pages = ["/aboutme", "/projects", "/resume"];
+    //const pages = ["/aboutme", "/projects", "/resume"];
+
+    const refFunc = [this.scrollToAboutme, this.scrollToProjects];
 
     const icons = [AboutMe, Projects, Resume];
 
@@ -50,23 +56,21 @@ class RightBox extends React.Component {
         <Divider />
         <List>
           {["About me", "Projects", "Resume"].map((text, index) => (
-            <Link to={pages[index]} key={text}>
-              <ListItem button>
-                <ListItemText
-                  disableTypography
-                  primary={
-                    <Typography type="body2" style={{ fontSize: "20px" }}>
-                      <img
-                        src={icons[index]}
-                        alt={text}
-                        style={{ maxWidth: "32px", marginRight: "6px" }}
-                      />
-                      {text}
-                    </Typography>
-                  }
-                />
-              </ListItem>
-            </Link>
+            <ListItem key={index} button onClick={refFunc[index]}>
+              <ListItemText
+                disableTypography
+                primary={
+                  <Typography type="body2" style={{ fontSize: "20px" }}>
+                    <img
+                      src={icons[index]}
+                      alt={text}
+                      style={{ maxWidth: "32px", marginRight: "6px" }}
+                    />
+                    {text}
+                  </Typography>
+                }
+              />
+            </ListItem>
           ))}
         </List>
         <Divider />

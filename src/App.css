@@ -3,9 +3,13 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover !important;
   min-height: 100vh;
   position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 600px) {
@@ -24,19 +28,19 @@ div {
   user-select: none;
 }
 
-.header {
-  display: flex!important;
-  justify-content: space-between!important;
+.header  {
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
-.input-image{
+.input-image {
   background-color: #f50057;
   margin: 20px;
   width: 250px;
 }
 
-.upload{
-  margin: 0
+.upload {
+  margin: 0;
 }
 .social {
   display: flex;
@@ -91,9 +95,9 @@ div {
   box-shadow: 0px 0px 20px 3px #000000 !important;
 }
 
-.allDrinks{
-  display: flex!important;
-  justify-content: space-between!important;
+.allDrinks {
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
 .kortti {
@@ -168,7 +172,7 @@ div {
   -webkit-text-stroke: 0px black;
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-  -1px 1px 0 #000, 1px 1px 0 #000;
+    -1px 1px 0 #000, 1px 1px 0 #000;
   margin: 0px;
 }
 
@@ -177,14 +181,14 @@ div {
   -webkit-text-stroke: 1px black;
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-  -1px 1px 0 #000, 1px 1px 0 #000;
+    -1px 1px 0 #000, 1px 1px 0 #000;
   margin-bottom: 20px !important;
 }
 
 .etusivu {
   background: linear-gradient(125deg, #cb21ff, #42aaff, #ffd00f);
   background-size: 300% 300%;
-  
+
   -webkit-animation: GradientAnimation 40s ease infinite;
   animation: GradientAnimation 40s ease infinite;
 }
@@ -235,15 +239,14 @@ div {
 @media only screen and (max-width: 1280px) {
   .presentation {
     display: none;
-
   }
   .presentationL {
     display: none;
   }
-  .onMobile{
+  .onMobile {
     display: block !important;
   }
 }
-.onMobile{
+.onMobile {
   display: none;
 }

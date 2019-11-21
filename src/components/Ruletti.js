@@ -6,6 +6,8 @@ import LeftBox from "./LeftBox";
 import Popup from "./Popup";
 import MetaTags from "react-meta-tags";
 import Drinkki from "./Drinkki";
+import Particles from "react-particles-js";
+import Swipeable from "./Swipeable";
 
 class Ruletti extends React.Component {
   constructor(props) {
@@ -38,7 +40,7 @@ class Ruletti extends React.Component {
       });
   }
 
-  handleClick() {
+  handleClick(direction) {
     this.setState({ gameStarted: true });
     if (this.state.drinks.length !== undefined) {
       this.randomNro = Math.floor(Math.random() * this.state.drinks.length);
@@ -61,6 +63,36 @@ class Ruletti extends React.Component {
           <title>Drinkkiruletti</title>
           <meta name="description" content="Rollaa itsellesi juoma!" />
         </MetaTags>
+        <Particles
+          style={{ position: "absolute" }}
+          params={{
+            particles: {
+              number: {
+                value: 70,
+                density: {
+                  enable: false
+                }
+              },
+              size: {
+                value: 3,
+                random: true,
+                anim: {
+                  speed: 4,
+                  size_min: 0.3
+                }
+              },
+              line_linked: {
+                enable: false
+              },
+              move: {
+                random: true,
+                speed: 0.4,
+                direction: "top",
+                out_mode: "out"
+              }
+            }
+          }}
+        />
         <div
           className="header"
           style={{
@@ -77,28 +109,30 @@ class Ruletti extends React.Component {
               Drinkkiruletti
             </h1>
           </Zoom>
-          <div
-            className="drinkki"
-            style={{
-              width: "100%",
-              height: "70vh",
-              position: "absolute"
-            }}
-            onClick={this.handleClick}
-          />
-          {this.state.gameStarted !== true ? (
-            <div>
-              <Fade in={this.state.transition} timeout={500}>
-                <h4 className="smaller_title">Paina ruutua aloittaaksesi!</h4>
-              </Fade>
-            </div>
-          ) : (
-            <Drinkki
-              drink={this.state.drinks[this.randomNro]}
-              lkm={this.randomLkm}
-              ref={this.drinkElement}
+          <Swipeable handleClick={this.handleClick}>
+            <div
+              className="drinkki"
+              style={{
+                width: "100%",
+                height: "70vh",
+                position: "absolute"
+              }}
+              onClick={this.handleClick}
             />
-          )}
+            {this.state.gameStarted !== true ? (
+              <div>
+                <Fade in={this.state.transition} timeout={500}>
+                  <h4 className="smaller_title">Paina ruutua aloittaaksesi!</h4>
+                </Fade>
+              </div>
+            ) : (
+              <Drinkki
+                drink={this.state.drinks[this.randomNro]}
+                lkm={this.randomLkm}
+                ref={this.drinkElement}
+              />
+            )}
+          </Swipeable>
         </div>
       </div>
     );

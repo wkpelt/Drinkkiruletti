@@ -9,17 +9,21 @@ import Market from "./Market";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Resume from "./Resume";
+import Juho from "./Juho";
+import test from "./test";
 
 const Main = () => {
   return (
     <Switch>
       <Route exact path={"/"} component={Etusivu} />
+      <Route exact path={"/test"} component={test} />
       <Route exact path={"/drinkkiruletti"} component={Ruletti} />
       <Route exact path={"/drinkkiruletti/juomat"} component={Juomat} />
       <Route exact path={"/drinkkiruletti/who"} component={Who} />
       <Route exact path={"/aboutme"} component={AboutMe} />
       <Route exact path={"/projects"} component={Projects} />
       <Route exact path={"/resume"} component={Resume} />
+      <Route exact path={"/juho"} component={Juho} />
       <Route exact path={"/villebot"} component={Villebot} />
       <Route exact path={"/mordormarket"} component={Market} />
       <Route component={Ruletti} />
