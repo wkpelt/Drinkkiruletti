@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "animated": "^0.2.2",
-    "axios": "^0.18.0",
+    "axios": "^1.6.0",
     "bootstrap": "^4.3.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-react-app": "^4.0.1",
